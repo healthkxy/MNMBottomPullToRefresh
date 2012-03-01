@@ -45,13 +45,10 @@
  * Deallocates not used memory
  */
 - (void)dealloc {
-    [pullToRefreshView_ release];
     pullToRefreshView_ = nil;
     
-    [table_ release];
     table_ = nil;
     
-    [super dealloc];
 }
 
 #pragma mark -
@@ -74,8 +71,6 @@
     if (self = [super init]) {
         
         client_ = client;
-        
-        table_ = [table retain];
         
         pullToRefreshView_ = [[MNMBottomPullToRefreshView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, CGRectGetWidth(table_.frame), height)];
     }

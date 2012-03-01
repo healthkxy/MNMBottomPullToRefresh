@@ -51,16 +51,11 @@
  * Deallocates used memory
  */
 - (void)dealloc {
-    [arrowImageView_ release];
     arrowImageView_ = nil;
     
-    [loadingActivityIndicator_ release];
     loadingActivityIndicator_ = nil;
     
-    [messageLabel_ release];
     messageLabel_ = nil;
-    
-    [super dealloc];
 }
 
 #pragma mark -
